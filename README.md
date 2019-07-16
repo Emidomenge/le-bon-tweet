@@ -38,6 +38,7 @@ Starts storybook allowing to browse react component separately and watch unit te
   
 ## Framework/Librairies Used  
   
+ - [Tachyons](https://github.com/tachyons-css/tachyons/)  
  - [AirBNB eslint](https://www.npmjs.com/package/eslint-config-airbnb)  
  - [React Fontawesome](https://github.com/FortAwesome/react-fontawesome)  
  - [React Bootstrap (using Bootstrap v4.3)](https://react-bootstrap.github.io/)  

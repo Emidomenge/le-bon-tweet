@@ -15,7 +15,7 @@ class App extends Component {
             <FontAwesomeIcon icon={faCoffee} />
           </h2>
         </div>
-        <p className="App-intro">
+        <p className="App-intro red">
           {'To get started, edit '}
           <code>src/App.js</code>
           {'and save to reload.'}
