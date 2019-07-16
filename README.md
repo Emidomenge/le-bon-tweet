@@ -33,11 +33,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
   
 ### `npm run storybook`  
   
-Start storybook allowing to browse react component separately and watch unit tests (coming soon!).  
+Starts storybook allowing to browse react component separately and watch unit tests (coming soon!).  
   
   
 ## Framework/Librairies Used  
   
+ - [React Fontawesome](https://github.com/FortAwesome/react-fontawesome)  
  - [React Bootstrap (using Bootstrap v4.3)](https://react-bootstrap.github.io/)  
  - [Storybook](https://www.learnstorybook.com/)  
  - [React v16](https://github.com/facebook/create-react-app)  
