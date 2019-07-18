@@ -33,7 +33,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
   
 ### `npm run storybook`  
   
-Starts storybook allowing to browse react component separately and watch unit tests (coming soon!). 
+Starts storybook allowing to browse react component separately. 
 
 ### `npm run test`   
 
@@ -42,6 +42,7 @@ Runs unit tests powered with Jest and Enzyme.
   
 ## Framework/Librairies Used  
   
+ - [Jest](https://jestjs.io/)  
  - [Enzyme](https://github.com/airbnb/enzyme)  
  - [Tachyons](https://github.com/tachyons-css/tachyons/)  
  - [AirBNB eslint](https://www.npmjs.com/package/eslint-config-airbnb)  
