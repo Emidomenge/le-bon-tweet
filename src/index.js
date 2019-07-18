@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import './index.css';
 import './assets/css/tachyons.min.css';
+import MessageForm from "./components/messageForm";
 
 ReactDOM.render(
-  <App />,
+  <MessageForm />,
   document.getElementById('root'),
 );
