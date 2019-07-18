@@ -13,7 +13,7 @@ Project created by [Emilien Domenge-Heritier](https://www.domenge.fr/)
   
 ## Main features of this app  
   
- - [TODO] - ...
+ - [TODO] - Add Redux
   
  
 ## [Dev] Inspect the project   
