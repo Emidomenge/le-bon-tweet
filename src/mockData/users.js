@@ -102,4 +102,4 @@ const otherUsers = [
   },
 ];
 
-export default { mainUser, otherUsers };
+export default [mainUser, ...otherUsers];

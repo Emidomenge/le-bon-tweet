@@ -16,7 +16,7 @@ const MessageForm = (props) => {
   const { messageFormReducer } = props;
   return (
     <Col sm={12}>
-      <p>Hello world</p>
+      <p className="green">Hello world</p>
       <div>
         { JSON.stringify(messageFormReducer) }
       </div>
