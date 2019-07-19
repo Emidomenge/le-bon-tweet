@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import providerDecorator from '../../../../../.storybook/providerDecorator';
-import MessageContainer from './index';
+import TweetContainer from './index';
 import mockTweets from '../../../../mockData/tweets';
 import mockUsers from '../../../../mockData/users';
 import userLib from '../../../../lib/user';
@@ -10,11 +10,11 @@ const mockPublicTweet = mockTweets[0];
 const mockPrivateTweet = mockTweets[1];
 const user = mockUsers[0];
 
-storiesOf('Message Container', module)
+storiesOf('Tweet Container', module)
   .addDecorator(providerDecorator)
-  .add('public message', () => {
+  .add('public tweet', () => {
     const story = (
-      <MessageContainer
+      <TweetContainer
         author={userLib.getFullName(user)}
         authorImage={user.picture}
         creationDate={mockPublicTweet.createdAt}
@@ -24,9 +24,9 @@ storiesOf('Message Container', module)
     );
     return story;
   })
-  .add('private message', () => {
+  .add('private tweet', () => {
     const story = (
-      <MessageContainer
+      <TweetContainer
         author={userLib.getFullName(user)}
         authorImage={user.picture}
         creationDate={mockPrivateTweet.createdAt}

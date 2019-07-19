@@ -1,7 +1,7 @@
-:local(.logo){
+.logo {
     height: 30px;
 }
 
-:local(.logoLbl){
+.logoLbl {
     height: 25px;
 }

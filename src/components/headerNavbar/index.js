@@ -3,7 +3,7 @@ import { Nav, Navbar } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import logo from '../../assets/img/lbt_logo.png';
 import logoLbl from '../../assets/img/lbt_logo2.png';
-import styles from './index.css';
+import styles from './index.module.css';
 
 const mapStateToProps = state => ({
   ...state,
@@ -16,7 +16,7 @@ const HeaderNavbar = (props) => {
   return (
     <Navbar bg="light" expand="lg">
       <Navbar.Brand href="#home">
-        <div className="flex align-items-center">
+        <div className="flex items-center">
           <img src={logo} alt="logo" className={styles.logo} />
           <img src={logoLbl} alt="logo" className={`ml1 ${styles.logoLbl}`} />
         </div>
