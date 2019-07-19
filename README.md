@@ -3,7 +3,7 @@
   
 # Le-bon-tweet  
     
-Simple tweet app, build with [React](https://reactjs.org/). 
+Simple tweet app, build with [React 16](https://reactjs.org/) and [Redux](https://github.com/reduxjs/redux) . 
   
 Project created by [Emilien Domenge-Heritier](https://www.domenge.fr/)  
 ## Demo  
@@ -13,7 +13,7 @@ Project created by [Emilien Domenge-Heritier](https://www.domenge.fr/)
   
 ## Main features of this app  
   
- - [TODO] - Add Redux
+ - [TODO] - ...
   
  
 ## [Dev] Inspect the project   
@@ -42,6 +42,7 @@ Runs unit tests powered with Jest and Enzyme.
   
 ## Framework/Librairies Used  
   
+ - [Redux](https://github.com/reduxjs/redux)  
  - [Jest](https://jestjs.io/)  
  - [Enzyme](https://github.com/airbnb/enzyme)  
  - [Tachyons](https://github.com/tachyons-css/tachyons/)  

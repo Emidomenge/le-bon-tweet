@@ -1,5 +1,34 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import messageFormAction from '../../redux/actions/messageFormAction';
 
-const MessageForm = () => (<div>Hello world</div>);
+const mapStateToProps = state => ({
+  ...state,
+});
 
-export default MessageForm;
+const mapDispatchToProps = dispatch => ({
+  messageFormAction: () => dispatch(messageFormAction()),
+});
+
+const MessageForm = (props) => {
+  const { messageFormReducer } = props;
+  return (
+    <div>
+      <p>Hello world</p>
+      <div>
+        { JSON.stringify(messageFormReducer) }
+      </div>
+    </div>
+  );
+};
+
+MessageForm.propTypes = {
+  messageFormReducer: PropTypes.arrayOf(PropTypes.any),
+};
+
+MessageForm.defaultProps = {
+  messageFormReducer: [{}],
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MessageForm);
