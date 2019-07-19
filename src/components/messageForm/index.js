@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Col } from 'react-bootstrap';
 import messageFormAction from '../../redux/actions/messageFormAction';
 
 const mapStateToProps = state => ({
@@ -14,12 +15,12 @@ const mapDispatchToProps = dispatch => ({
 const MessageForm = (props) => {
   const { messageFormReducer } = props;
   return (
-    <div>
+    <Col sm={12}>
       <p>Hello world</p>
       <div>
         { JSON.stringify(messageFormReducer) }
       </div>
-    </div>
+    </Col>
   );
 };
 

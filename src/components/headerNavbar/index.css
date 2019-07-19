@@ -1,0 +1,7 @@
+:local(.logo){
+    height: 30px;
+}
+
+:local(.logoLbl){
+    height: 25px;
+}
