@@ -13,3 +13,7 @@ body {
 p {
   line-height: 19px;
 }
+
+.mainColor {
+  color: #f56b2a;
+}

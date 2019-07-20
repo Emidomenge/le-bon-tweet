@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Container } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import TweetContainer from './components/tweetContainer';
+import NoResults from './components/noResults';
 
 const mapStateToProps = state => ({
   ...state,
@@ -13,7 +14,6 @@ const mapDispatchToProps = (/* dispatch */) => ({});
 
 const BodyContainer = (props) => {
   const { tweetsReducer: { tweetsToDisplay } } = props;
-  const tweetsArray = tweetsToDisplay;
 
   const displayTweets = tweetsArr => tweetsArr.map((tweet, index) => (
     <TweetContainer
@@ -28,7 +28,10 @@ const BodyContainer = (props) => {
 
   return (
     <Container>
-      { tweetsArray.length !== 0 ? displayTweets(tweetsArray) : 'Hello' }
+      {
+          tweetsToDisplay && tweetsToDisplay.length !== 0
+            ? displayTweets(tweetsToDisplay) : <NoResults />
+      }
     </Container>
   );
 };

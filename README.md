@@ -13,8 +13,8 @@ Project created by [Emilien Domenge-Heritier](https://www.domenge.fr/)
   
 ## Main features  
   
- - Welcome page if not connected (Mocked behaviour)
- - Ability to sign in with mocked user ("Scarlett Carr")
+ - Welcome page if not connected
+ - Ability to browse mocked pages as a signed in user (with "Scarlett Carr" fake account)
  - Watch + Create public tweets (="Actu' Tweets")
  - Watch + Create private tweets (="Secret Tweets")
  - Responsive Design
