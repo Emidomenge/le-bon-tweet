@@ -6,21 +6,23 @@ import PropTypes from 'prop-types';
 import TweetContainer from './components/tweetContainer';
 import Thumbnail from './components/thumbnail';
 import noTweetsImg from '../../assets/img/no_tweets.svg';
+import errorFetchingTweetsImg from '../../assets/img/error.svg';
 import TweetLoader from './components/tweetLoader';
-
+import tweetsActions from '../../redux/actions/tweetsActions';
 
 const mapStateToProps = state => ({
   ...state,
 });
 
-const mapDispatchToProps = (/* dispatch */) => ({});
+const mapDispatchToProps = dispatch => ({
+  setLoadingStatusTo: bool => tweetsActions.setLoadingStatusTo(dispatch, bool),
+  setAnError: errorData => tweetsActions.setAnError(dispatch, errorData),
+  updateTweetsData: tweetsData => tweetsActions.updateTweetsData(dispatch, tweetsData),
+});
 
 class BodyContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isLoading: true,
-    };
     this.getTweets = this.getTweets.bind(this);
     this.handleDisplay = this.handleDisplay.bind(this);
   }
@@ -30,7 +32,10 @@ class BodyContainer extends Component {
   }
 
   getTweets() {
-    const { apiSleepTime, apiCodeAnswer } = this.props;
+    const {
+      apiSleepTime, apiCodeAnswer, setLoadingStatusTo,
+      setAnError, updateTweetsData, mockedTweets,
+    } = this.props;
     const apiUrl = new URL(`https://httpstat.us/${apiCodeAnswer}`);
     const headerParams = {
       token: 'eyJz93a...k4laUWw',
@@ -64,27 +69,44 @@ class BodyContainer extends Component {
         throw new Error('Network response was not ok.');
       })
       .then((data) => {
-        console.log(data, 'json');
         // eslint-disable-next-line no-param-reassign
-        data = {};
-        // call reducer
+        data = { tweets: mockedTweets }; // MOCK ANSWER
 
-        this.setState({
-          isLoading: false,
-        });
+        // call redux actions
+        setLoadingStatusTo(false);
+        updateTweetsData(data.tweets);
       })
-      .catch((e) => {
-        console.log(e, 'error');
+      .catch((error) => {
+        // call redux actions
+        setLoadingStatusTo(false);
+        setAnError(error);
       });
   }
 
   handleDisplay() {
-    const { isLoading } = this.state;
+    const { tweetsReducer: { tweetsToDisplay, isLoading, hasError } } = this.props;
+
+    const NoTweets = () => (
+      <Thumbnail
+        label={"Oops, aucun tweet n'a été trouvé..."}
+        image={noTweetsImg}
+      />
+    );
+
+    const ErrorWhileFetching = () => (
+      <Thumbnail
+        label="Aïe Aïe Aïe ! Une erreur est survenue, veuillez réessayer ultérieurement"
+        image={errorFetchingTweetsImg}
+      />
+    );
+
     if (isLoading) {
       return (<TweetLoader />);
     }
 
-    const { tweetsReducer: { tweetsToDisplay } } = this.props;
+    if (hasError) {
+      return (<ErrorWhileFetching />);
+    }
 
     const displayTweets = tweetsArr => tweetsArr.map((tweet, index) => (
       <TweetContainer
@@ -98,7 +120,7 @@ class BodyContainer extends Component {
     ));
 
     return tweetsToDisplay && tweetsToDisplay.length !== 0
-      ? displayTweets(tweetsToDisplay) : <Thumbnail label={"Oops, aucun tweet n'a été trouvé..."} image={noTweetsImg} />;
+      ? displayTweets(tweetsToDisplay) : <NoTweets />;
   }
 
   render() {
@@ -114,8 +136,15 @@ BodyContainer.propTypes = {
   // BEGIN: Test API props
   apiSleepTime: PropTypes.number,
   apiCodeAnswer: PropTypes.number,
+  mockedTweets: PropTypes.arrayOf(PropTypes.any),
   // END: Test API props
+  // BEGIN: Redux props
+  setLoadingStatusTo: PropTypes.func.isRequired,
+  setAnError: PropTypes.func.isRequired,
+  updateTweetsData: PropTypes.func.isRequired,
   tweetsReducer: PropTypes.shape({
+    isLoading: PropTypes.bool.isRequired,
+    hasError: PropTypes.any,
     tweetsToDisplay: PropTypes.arrayOf(
       PropTypes.shape(
         {
@@ -135,11 +164,13 @@ BodyContainer.propTypes = {
       ),
     ).isRequired,
   }).isRequired,
+  // END: Redux props
 };
 
 BodyContainer.defaultProps = {
   apiSleepTime: 2000,
   apiCodeAnswer: 200,
+  mockedTweets: [],
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BodyContainer);

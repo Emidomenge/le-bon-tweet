@@ -5,48 +5,35 @@ import BodyContainer from '.';
 import mockPublicTweets from '../../mockData/publicTweets';
 import mockPrivateTweets from '../../mockData/privateTweets';
 
-const customProviderDecoratorWithPublicTweets = (story, storyBookData) => {
-  const initialState = {
-    tweetsReducer: {
-      tweetsToDisplay: mockPublicTweets,
-    },
-  };
-  return providerDecorator(story, storyBookData, initialState);
-};
-
-const customProviderDecoratorWithPrivateTweets = (story, storyBookData) => {
-  const initialState = {
-    tweetsReducer: {
-      tweetsToDisplay: mockPrivateTweets,
-    },
-  };
-  return providerDecorator(story, storyBookData, initialState);
-};
-
-storiesOf('Body Container', module)
-  .addDecorator(customProviderDecoratorWithPublicTweets)
-  .add('with public tweets', () => {
-    const story = (
-      <BodyContainer />
-    );
-    return story;
-  });
-
-
-storiesOf('Body Container', module)
-  .addDecorator(customProviderDecoratorWithPrivateTweets)
-  .add('with private tweets', () => {
-    const story = (
-      <BodyContainer />
-    );
-    return story;
-  });
-
 storiesOf('Body Container', module)
   .addDecorator(providerDecorator)
+  .add('with public tweets', () => {
+    const story = (
+      <BodyContainer
+        mockedTweets={mockPublicTweets}
+      />
+    );
+    return story;
+  })
+  .add('with private tweets', () => {
+    const story = (
+      <BodyContainer
+        mockedTweets={mockPrivateTweets}
+      />
+    );
+    return story;
+  })
   .add('no tweets', () => {
     const story = (
       <BodyContainer />
+    );
+    return story;
+  })
+  .add('fetching error', () => {
+    const story = (
+      <BodyContainer
+        apiCodeAnswer={403}
+      />
     );
     return story;
   });

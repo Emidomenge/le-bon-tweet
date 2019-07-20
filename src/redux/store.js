@@ -4,12 +4,7 @@ import logger from 'redux-logger';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import messageFormReducer from './reducers/messageFormReducer';
 import tweetsReducer from './reducers/tweetsReducer';
-
-const initState = {
-  tweetsReducer: {
-    tweetsToDisplay: [],
-  },
-};
+import initState from './initialState';
 
 export default function configureStore(initialState = initState) {
   return createStore(
