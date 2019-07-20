@@ -11,19 +11,30 @@ Project created by [Emilien Domenge-Heritier](https://www.domenge.fr/)
 - [Coming soon...](https://www.domenge.fr/)   
    
   
-## Main features of this app  
+## Main features  
   
- - [TODO] - ...
+ - Welcome page if not connected (Mocked behaviour)
+ - Ability to sign in with mocked user ("Scarlett Carr")
+ - Watch + Create public tweets (="Actu' Tweets")
+ - Watch + Create private tweets (="Secret Tweets")
+ - Responsive Design
+ - Full static design, with mocked API call
+ - Storybook implementation, to see disassembled react components
+ - App covered with some unit tests (just as example of how unit test covering looks like...)
+ 
+## Nice to have features  
+  
+ - [TODO] - Display "dark mode" like, when browsing private tweets
   
  
 ## [Dev] Inspect the project   
   
-**Prerequisite:**  
+**Prerequisites:**  
  - Clone the project  
  - Go to the project directory and install node package dependencies: `npm install` 
+ - Install [Redux dev tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) chrome plugin
   
-  
-Then, run:  
+**After prerequisites:**  
   
 ### `npm start`  
   
@@ -40,6 +51,9 @@ Starts storybook allowing to browse react component separately.
 Runs unit tests powered with Jest and Enzyme. 
   
   
+**Notes:**  
+- All logs are available voluntary on production environment
+
 ## Framework/Librairies Used  
   
  - [Redux](https://github.com/reduxjs/redux)  

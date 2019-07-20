@@ -1,15 +1,23 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-import mockTweets from '../mockData/tweets';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import messageFormReducer from './reducers/messageFormReducer';
+import tweetsReducer from './reducers/tweetsReducer';
 
-export default function configureStore(initialState = { messageFormReducer: mockTweets }) {
+const initState = {
+  tweetsReducer: {
+    tweetsToDisplay: [],
+  },
+};
+
+export default function configureStore(initialState = initState) {
   return createStore(
     combineReducers({
       messageFormReducer,
+      tweetsReducer,
     }),
     initialState,
-    applyMiddleware(thunk, logger),
+    composeWithDevTools(applyMiddleware(thunk, logger)),
   );
 }

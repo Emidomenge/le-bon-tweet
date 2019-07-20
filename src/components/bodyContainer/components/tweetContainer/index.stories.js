@@ -2,21 +2,19 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import providerDecorator from '../../../../../.storybook/providerDecorator';
 import TweetContainer from './index';
-import mockTweets from '../../../../mockData/tweets';
-import mockUsers from '../../../../mockData/users';
-import userLib from '../../../../lib/user';
+import mockPublicTweets from '../../../../mockData/publicTweets';
+import mockPrivateTweets from '../../../../mockData/privateTweets';
 
-const mockPublicTweet = mockTweets[0];
-const mockPrivateTweet = mockTweets[1];
-const user = mockUsers[0];
+const mockPublicTweet = mockPublicTweets[0];
+const mockPrivateTweet = mockPrivateTweets[1];
 
 storiesOf('Tweet Container', module)
   .addDecorator(providerDecorator)
   .add('public tweet', () => {
     const story = (
       <TweetContainer
-        author={userLib.getFullName(user)}
-        authorImage={user.picture}
+        author={mockPublicTweet.createdByUser.fullName}
+        authorImage={mockPublicTweet.createdByUser.picture}
         creationDate={mockPublicTweet.createdAt}
         text={mockPublicTweet.text}
         restrictedTo={mockPublicTweet.restrictedTo}
@@ -27,8 +25,8 @@ storiesOf('Tweet Container', module)
   .add('private tweet', () => {
     const story = (
       <TweetContainer
-        author={userLib.getFullName(user)}
-        authorImage={user.picture}
+        author={mockPrivateTweet.createdByUser.fullName}
+        authorImage={mockPrivateTweet.createdByUser.picture}
         creationDate={mockPrivateTweet.createdAt}
         text={mockPrivateTweet.text}
         restrictedTo={mockPrivateTweet.restrictedTo}
