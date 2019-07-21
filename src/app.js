@@ -56,6 +56,10 @@ class App extends Component {
     };
 
     const fetchInfo = {
+      api: {
+        sleepTime: 0,
+        codeAnswer: 200
+      },
       header: {
         method: 'GET',
         withCredentials: true,

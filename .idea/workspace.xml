@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c430fdf8-76db-4b84-b8e5-24661feb93eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/loader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/loader/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/thumbnail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/thumbnail/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/thumbnail/index.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/thumbnail/index.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/headerNavbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/headerNavbar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/headerNavbar/index.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/headerNavbar/index.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tweetListContainer/components/tweetContainer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tweetListContainer/components/tweetContainer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tweetListContainer/components/tweetContainer/index.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tweetListContainer/components/tweetContainer/index.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/welcome/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/welcome/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/welcome/index.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/welcome/index.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/welcome/index.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/welcome/index.stories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/headerNavbar/index.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/headerNavbar/index.stories.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,10 +45,13 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/lib/user.js">
+            <entry file="file://$PROJECT_DIR$/.storybook/providerDecorator.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" selection-start-line="2" selection-end-line="2" />
+                <state relative-caret-position="60">
+                  <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -80,7 +71,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="589">
+                <state relative-caret-position="866">
                   <caret line="130" column="3" lean-forward="true" selection-start-line="130" selection-start-column="3" selection-end-line="130" selection-end-column="3" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
@@ -110,7 +101,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/headerNavbar/index.stories.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
+                <state relative-caret-position="120">
+                  <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -212,7 +204,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>add</find>
       <find>react-sc</find>
       <find>babel</find>
       <find>local</find>
@@ -242,6 +233,7 @@
       <find>fetch</find>
       <find>loaderClass</find>
       <find>load</find>
+      <find>initialState</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -250,7 +242,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/bodyContainer/components/tweetContainer/index.module.css" />
         <option value="$PROJECT_DIR$/src/components/bodyContainer/components/tweetContainer/index.js" />
         <option value="$PROJECT_DIR$/src/mockData/tweets.js" />
         <option value="$PROJECT_DIR$/src/mockData/privateTweets.js" />
@@ -301,6 +292,7 @@
         <option value="$PROJECT_DIR$/src/components/common/loader/index.js" />
         <option value="$PROJECT_DIR$/src/components/headerNavbar/index.js" />
         <option value="$PROJECT_DIR$/src/app.js" />
+        <option value="$PROJECT_DIR$/src/components/headerNavbar/index.stories.js" />
       </list>
     </option>
   </component>
@@ -396,7 +388,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563714687303" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563715306862" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -444,12 +436,12 @@
       <workItem from="1563471866843" duration="298000" />
       <workItem from="1563472307634" duration="1301000" />
       <workItem from="1563557976502" duration="136000" />
-      <workItem from="1563558161282" duration="48906000" />
+      <workItem from="1563558161282" duration="49139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53707000" />
+    <option name="totallyTimeSpent" value="53940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -627,16 +619,6 @@
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="9" selection-end-column="30" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.storybook/providerDecorator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -885,15 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/headerNavbar/index.stories.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/common/thumbnail/index.module.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -901,9 +874,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.storybook/providerDecorator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/headerNavbar/index.stories.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
+        <state relative-caret-position="866">
           <caret line="130" column="3" lean-forward="true" selection-start-line="130" selection-start-column="3" selection-end-line="130" selection-end-column="3" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />

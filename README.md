@@ -27,6 +27,7 @@ Project created by [Emilien Domenge-Heritier](https://www.domenge.fr/)
  - [TODO] - Display "dark mode" like, when browsing private tweets
  - [TODO] - Infinite Scroll when browsing tweets
  - [TODO] - Mock website when user not connected
+ - [TODO] - Page loading optimizations
   
  
 ## [Dev] Inspect the project   
