@@ -25,7 +25,7 @@ const MessageForm = (props) => {
 };
 
 MessageForm.propTypes = {
-  messageFormReducer: PropTypes.arrayOf(PropTypes.any),
+  messageFormReducer: PropTypes.any,
 };
 
 MessageForm.defaultProps = {
