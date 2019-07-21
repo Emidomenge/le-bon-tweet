@@ -19,7 +19,7 @@ const TweetContainer = (props) => {
 
   return (
     <div className={`${styles.tweetContainer} f15 mb2`}>
-      <img src={authorImage} className={`${styles.imgProfile} mr-auto ml-auto`} alt={`tweet de ${author}`} />
+      <img src={authorImage} className={`${styles.imgProfile} mr-auto ml-auto photoCircle`} alt={`tweet de ${author}`} />
       <div className={styles.tweetBody}>
         <div className="flex items-center">
           <div className="black b">{`${author}`}</div>

@@ -30,7 +30,10 @@ Loader.propTypes = {
   bodyClass: PropTypes.string,
   labelClass: PropTypes.string,
   labelValue: PropTypes.string,
-  loaderClass: PropTypes.string,
+  loaderClass: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape(),
+  ]),
   loaderPxSize: PropTypes.number,
 };
 

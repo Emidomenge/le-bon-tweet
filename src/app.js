@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import HeaderNavbar from './components/headerNavbar';
 import publicTweets from './mockData/publicTweets';
 import privateTweets from './mockData/privateTweets';
@@ -11,6 +12,7 @@ import userActions from './redux/actions/userAction';
 import serverAnswer from './mockData/serverAnswer';
 import helper from './lib/helper';
 import Loader from './components/common/loader';
+import initialState from './redux/initialState';
 
 
 const mapStateToProps = state => ({
@@ -82,7 +84,7 @@ class App extends Component {
   }
 
   render() {
-    const { userReducer: { isLoading } } = this.props;
+    const { userReducer: { isLoading, userInfo } } = this.props;
 
     if (isLoading) {
       return (
@@ -102,7 +104,7 @@ class App extends Component {
           path="/"
           component={() => (
             <Welcome
-              isAuthenticated
+              userInfo={userInfo.personalData}
             />
           )}
         />
@@ -130,11 +132,15 @@ class App extends Component {
 }
 
 App.propTypes = {
-  // isAuthenticated: PropTypes.bool,
+  // BEGIN: Redux props
+  userReducer: PropTypes.shape(),
+  auth: PropTypes.func.isRequired,
+  setLoadingStatusTo: PropTypes.func.isRequired,
+  // END: Redux props
 };
 
 App.defaultProps = {
-  // isAuthenticated: false,
+  userReducer: initialState.userReducer,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -1,10 +1,8 @@
 const userLib = {};
 
-userLib.getFullName = (user) => {
-  const firstName = user.name.first.charAt(0).toUpperCase() + user.name.first.slice(1);
-  const lastName = user.name.last.charAt(0).toUpperCase() + user.name.last.slice(1);
-  return `${firstName} ${lastName}`;
-};
+userLib.firstCharUpperCase = string => string.charAt(0).toUpperCase() + string.slice(1);
+
+userLib.getFullName = user => `${userLib.firstCharUpperCase(user.name.first)} ${userLib.firstCharUpperCase(user.name.last)}`;
 
 userLib.getAge = (user) => {
   const ageDifMs = Date.now() - user.dob.getTime();

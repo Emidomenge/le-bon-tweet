@@ -10,7 +10,6 @@
 
 .imgProfile {
     height: 50px;
-    border-radius: 50%;
     grid-column: 1 / 1;
     grid-row: 1 / 1;
 }

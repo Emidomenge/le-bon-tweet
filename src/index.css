@@ -33,12 +33,24 @@ p {
                      |___/
  */
 
+.f12 {
+  font-size: 12px;
+}
+
 .f15 {
   font-size: 15px;
 }
 
+.f25 {
+  font-size: 25px;
+}
+
 .mainColor {
   color: #f56b2a;
+}
+
+.photoCircle {
+  border-radius: 50%;
 }
 
 /*
@@ -52,13 +64,18 @@ p {
                                         |_|
  */
 
+#root .navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .navbar-nav .nav-link {
   position: relative;
 }
 
 .navbar-nav .nav-link:after{
   border-bottom:3px solid #f56b2a;
-  bottom: -8px;
+  bottom: -17px;
   content:"";
   display:block;
   left:50%;
