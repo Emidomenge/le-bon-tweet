@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Container } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import TweetContainer from './components/tweetContainer';
-import Thumbnail from './components/thumbnail';
+import Thumbnail from '../common/thumbnail';
 import noTweetsImg from '../../assets/img/no_tweets.svg';
 import errorFetchingTweetsImg from '../../assets/img/error.svg';
 import TweetLoader from './components/tweetLoader';
@@ -168,7 +168,7 @@ BodyContainer.propTypes = {
 };
 
 BodyContainer.defaultProps = {
-  apiSleepTime: 2000,
+  apiSleepTime: 500,
   apiCodeAnswer: 200,
   mockedTweets: [],
 };
