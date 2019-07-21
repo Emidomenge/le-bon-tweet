@@ -21,7 +21,7 @@ const TweetContainer = (props) => {
     <div className={`${styles.tweetContainer} f15 mb2 mr-auto ml-auto`}>
       <img src={authorImage} className={`${styles.imgProfile} mr-auto ml-auto photoCircle`} alt={`tweet de ${author}`} />
       <div className={styles.tweetBody}>
-        <div className="flex items-center">
+        <div className="flex items-center flex-wrap">
           <div className="black b">{`${author}`}</div>
           <div className="ml1">·</div>
           <div className="ml1">{`${tweet.displayTweetDate(new Date(creationDate))}`}</div>

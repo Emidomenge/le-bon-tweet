@@ -8,7 +8,7 @@ Simple tweet app, build with [React 16](https://reactjs.org/) and [Redux](https:
 Project created by [Emilien Domenge-Heritier](https://www.domenge.fr/)  
 ## Demo  
   
-- [Coming soon...](https://www.domenge.fr/)   
+- [Click here !](https://le-bon-tweet.web.app/)   
    
   
 ## Main features  
@@ -28,7 +28,7 @@ Project created by [Emilien Domenge-Heritier](https://www.domenge.fr/)
  - [TODO] - Infinite Scroll when browsing tweets
  - [TODO] - Mock website when user not connected
  - [TODO] - Page loading optimizations
- - [TODO] - Improve responsive
+ - [DONE] - Improve responsive
   
  
 ## [Dev] Inspect the project   

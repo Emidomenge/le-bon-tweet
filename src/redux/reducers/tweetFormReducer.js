@@ -9,7 +9,7 @@ const tweetFormReducer = (state = {}, action) => {
       };
     case reduxGlossary.actionName.tweetForm.submit:
       const newState = state;
-      newState.newTweets.push(action.payload);
+      newState.newTweets.unshift(action.payload);
       return {
         ...newState,
       };

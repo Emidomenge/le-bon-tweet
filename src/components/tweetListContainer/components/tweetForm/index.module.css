@@ -1,4 +1,9 @@
 .submitButton {
-    margin-top: -45px;
     min-width: 120px;
+}
+
+@media only screen and (min-width: 600px) {
+    .submitButton {
+        margin-top: -45px;
+    }
 }

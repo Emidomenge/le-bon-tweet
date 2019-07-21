@@ -7,13 +7,13 @@ const Thumbnail = (props) => {
   const { image, label, children } = props;
   const handleDisplay = () => {
     if (!children) {
-      return (<h4 className="mt4 tc">{label}</h4>);
+      return (<h4 className={`mt4 tc ${styles.label}`}>{label}</h4>);
     }
     return (children);
   };
   return (
     <Row>
-      <Col>
+      <Col className={'flex justify-center'}>
         <div className={styles.container}>
           <img src={image} className={`mt3 pv4 mr-auto ml-auto ${styles.img}`} alt="Aucun résultat" />
           {handleDisplay()}

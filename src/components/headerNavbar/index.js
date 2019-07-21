@@ -24,7 +24,7 @@ const HeaderNavbar = (props) => {
   const isActive = relativeUrl => helper.getRelativeUrl().includes(relativeUrl);
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="sm">
       <Navbar.Brand href="/">
         <div className="flex items-center">
           <img src={logo} alt="logo" className={styles.logo} />

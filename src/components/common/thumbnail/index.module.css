@@ -7,3 +7,23 @@
 .container {
     margin-top: 10%;
 }
+
+.label {
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+        margin-top: -70px;
+    }
+
+    .img {
+        padding: unset;
+        max-width: 40vh;
+    }
+
+    .label {
+        margin-top: -60px;
+    }
+}
