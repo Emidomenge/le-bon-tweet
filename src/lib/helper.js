@@ -1,6 +1,8 @@
 /* eslint-disable no-param-reassign */
 const helper = {};
 
+helper.getJwtToken = () => window.localStorage.getItem('jwtToken');
+
 helper.getRelativeUrl = () => {
   const url = window.location.href;
   return url.replace(/^(?:\/\/|[^\/]+)*\//, '');

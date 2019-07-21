@@ -4,7 +4,7 @@ import providerDecorator from '../../../../../.storybook/providerDecorator';
 import TweetLoader from './index';
 
 
-storiesOf('Tweet Container', module)
+storiesOf('TweetList Container/Tweet', module)
   .addDecorator(providerDecorator)
   .add('tweet loading...', () => {
     const story = (

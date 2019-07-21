@@ -1,3 +1,5 @@
+import tweetFormReducer from './reducers/tweetFormReducer';
+
 export default {
   tweetsReducer: {
     tweetsToDisplay: null,
@@ -7,5 +9,10 @@ export default {
   userReducer: {
     userInfo: null,
     isLoading: true,
+  },
+  tweetFormReducer: {
+    newTweets: [],
+    isLoading: false,
+    error: null,
   },
 };

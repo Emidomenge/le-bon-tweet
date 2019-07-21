@@ -1,9 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import MessageForm from './index';
-import ProviderWrapper from '../../../.storybook/prodiverWrapper';
-import configureStore from '../../redux/store';
-import initialState from '../../redux/initialState';
+import MessageForm from '.';
+import ProviderWrapper from '../../../../../.storybook/prodiverWrapper';
+import configureStore from '../../../../redux/store';
+import initialState from '../../../../redux/initialState';
 
 // DEBUG: console.log(wrapper.html());
 

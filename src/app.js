@@ -8,7 +8,7 @@ import privateTweets from './mockData/privateTweets';
 import Welcome from './components/welcome';
 import TweetListContainer from './components/tweetListContainer';
 import other from './mockData/other';
-import userActions from './redux/actions/userAction';
+import userActions from './redux/actions/userActions';
 import serverAnswer from './mockData/serverAnswer';
 import helper from './lib/helper';
 import Loader from './components/common/loader';
@@ -25,10 +25,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 class App extends Component {
-  static getJwtToken() {
-    return window.localStorage.getItem('jwtToken');
-  }
-
   constructor(props) {
     super(props);
     this.getUserInfo = this.getUserInfo.bind(this);
@@ -40,7 +36,7 @@ class App extends Component {
     // END: Static behaviour
 
 
-    const jwtToken = App.getJwtToken();
+    const jwtToken = helper.getJwtToken();
     if (jwtToken) {
       this.getUserInfo(jwtToken);
     } else {
@@ -58,7 +54,7 @@ class App extends Component {
     const fetchInfo = {
       api: {
         sleepTime: 0,
-        codeAnswer: 200
+        codeAnswer: 200,
       },
       header: {
         method: 'GET',

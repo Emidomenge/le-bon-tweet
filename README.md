@@ -28,6 +28,7 @@ Project created by [Emilien Domenge-Heritier](https://www.domenge.fr/)
  - [TODO] - Infinite Scroll when browsing tweets
  - [TODO] - Mock website when user not connected
  - [TODO] - Page loading optimizations
+ - [TODO] - Improve responsive
   
  
 ## [Dev] Inspect the project   

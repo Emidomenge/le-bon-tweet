@@ -5,7 +5,7 @@ import BodyContainer from '.';
 import mockPublicTweets from '../../mockData/publicTweets';
 import mockPrivateTweets from '../../mockData/privateTweets';
 
-storiesOf('TweetListContainer Container', module)
+storiesOf('TweetList Container', module)
   .addDecorator(providerDecorator)
   .add('with public tweets', () => {
     const story = (

@@ -8,7 +8,7 @@ import mockPrivateTweets from '../../../../mockData/privateTweets';
 const mockPublicTweet = mockPublicTweets[0];
 const mockPrivateTweet = mockPrivateTweets[1];
 
-storiesOf('Tweet Container', module)
+storiesOf('TweetList Container/Tweet', module)
   .addDecorator(providerDecorator)
   .add('public tweet', () => {
     const story = (

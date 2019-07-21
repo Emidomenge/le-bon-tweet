@@ -11,6 +11,7 @@ import TweetLoader from './components/tweetLoader';
 import tweetsActions from '../../redux/actions/tweetsActions';
 import helper from '../../lib/helper';
 import mockData from '../../mockData/other';
+import TweetForm from './components/tweetForm';
 
 const mapStateToProps = state => ({
   ...state,
@@ -124,8 +125,10 @@ class TweetListContainer extends Component {
   }
 
   render() {
+    const { tweetsReducer: { isLoading, hasError } } = this.props;
     return (
-      <Container>
+      <Container className="mt2">
+        {!isLoading && !hasError && <TweetForm />}
         {this.handleDisplay()}
       </Container>
     );

@@ -53,6 +53,21 @@ p {
   border-radius: 50%;
 }
 
+/*ie: lbtButtonLock doesn't have hover effect */
+.lbtButton, .lbtButtonLock {
+  background-color: #f56b2a;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: background-color .3s,color .3s;
+  transition: background-color .3s,color .3s;
+  padding: 10px 20px;
+}
+
+.lbtButton:hover {
+  cursor: pointer;
+  background-color: #c0562a;
+}
+
 /*
  _                 _       _                                                   _                  _          _   _
 | |               | |     | |                                                 | |                (_)        | | (_)

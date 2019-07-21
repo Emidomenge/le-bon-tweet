@@ -1,6 +1,9 @@
 const reduxGlossary = {
   actionName: {
-    messageForm: 'MESSAGE_FORM_ACTION',
+    tweetForm: {
+      status: 'TWEET_FORM_STATUS_ACTION',
+      submit: 'TWEET_FORM_SUBMIT_ACTION',
+    },
     tweet: {
       status: 'TWEET_STATUS_ACTION',
       error: 'TWEET_ERROR_ACTION',
