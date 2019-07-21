@@ -1,3 +1,5 @@
+// INFO: Sample of mocked users as it would be on a data base
+
 const mainUser = {
   id: '5d3096eaac9f6960bf47fb24',
   gender: 'female',

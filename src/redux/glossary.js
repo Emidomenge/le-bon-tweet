@@ -6,6 +6,10 @@ const reduxGlossary = {
       error: 'TWEET_ERROR_ACTION',
       update: 'TWEETS_UPDATE_ACTION',
     },
+    user: {
+      auth: 'USER_AUTHENTICATION_ACTION',
+      status: 'USER_STATUS_ACTION',
+    },
   },
 };
 

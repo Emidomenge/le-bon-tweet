@@ -1,7 +1,11 @@
 export default {
   tweetsReducer: {
-    tweetsToDisplay: [],
+    tweetsToDisplay: null,
     isLoading: true,
     hasError: null,
+  },
+  userReducer: {
+    userInfo: null,
+    isLoading: true,
   },
 };

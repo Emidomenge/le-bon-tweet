@@ -9,6 +9,8 @@ import noTweetsImg from '../../assets/img/no_tweets.svg';
 import errorFetchingTweetsImg from '../../assets/img/error.svg';
 import TweetLoader from './components/tweetLoader';
 import tweetsActions from '../../redux/actions/tweetsActions';
+import helper from '../../lib/helper';
+import mockData from '../../mockData/other';
 
 const mapStateToProps = state => ({
   ...state,
@@ -20,7 +22,7 @@ const mapDispatchToProps = dispatch => ({
   updateTweetsData: tweetsData => tweetsActions.updateTweetsData(dispatch, tweetsData),
 });
 
-class BodyContainer extends Component {
+class TweetListContainer extends Component {
   constructor(props) {
     super(props);
     this.getTweets = this.getTweets.bind(this);
@@ -28,7 +30,10 @@ class BodyContainer extends Component {
   }
 
   componentDidMount() {
-    this.getTweets();
+    const { tweetsReducer: { tweetsToDisplay } } = this.props;
+    if (!tweetsToDisplay) {
+      this.getTweets();
+    }
   }
 
   getTweets() {
@@ -36,47 +41,42 @@ class BodyContainer extends Component {
       apiSleepTime, apiCodeAnswer, setLoadingStatusTo,
       setAnError, updateTweetsData, mockedTweets,
     } = this.props;
-    const apiUrl = new URL(`https://httpstat.us/${apiCodeAnswer}`);
+
     const headerParams = {
-      token: 'eyJz93a...k4laUWw',
-      tokenType: 'Bearer',
+      token: mockData.jwtToken.token,
+      tokenType: mockData.jwtToken.type,
     };
 
-    const requestParams = {
-      userId: 'xxxxx',
-      tweetType: 'public',
-    };
-
-    const header = {
-      method: 'GET',
-      withCredentials: true,
-      // credentials: 'include', // in comment to AVOID CORS issues
-      headers: {
-        Authorization: `${headerParams.tokenType} ${headerParams.token}`,
-        'Content-Type': 'application/json',
+    const fetchInfo = {
+      url: 'https://httpstat.us/',
+      api: {
+        codeAnswer: apiCodeAnswer,
+        sleepTime: apiSleepTime,
+      },
+      header: {
+        method: 'GET',
+        withCredentials: true,
+        // credentials: 'include', // in comment to AVOID CORS issues
+        headers: {
+          Authorization: `${headerParams.tokenType} ${headerParams.token}`,
+          'Content-Type': 'application/json',
+        },
+      },
+      requestParams: {
+        userId: 'xxxxx',
+        tweetType: 'public',
       },
     };
-    /*
-      WARNING: fake fetch API below
-     */
-    requestParams.sleep = apiSleepTime;
-    apiUrl.search = new URLSearchParams(requestParams);
-    fetch(apiUrl, header)
-      .then((response) => {
-        if (response && response.ok) {
-          return { bonjour: 'hello' };
-        }
-        throw new Error('Network response was not ok.');
-      })
-      .then((data) => {
-        // eslint-disable-next-line no-param-reassign
-        data = { tweets: mockedTweets }; // MOCK ANSWER
 
+    const mockedAnwser = { tweets: mockedTweets };
+
+    helper.mockFetchCall(fetchInfo, mockedAnwser,
+      (data) => {
         // call redux actions
         setLoadingStatusTo(false);
         updateTweetsData(data.tweets);
-      })
-      .catch((error) => {
+      },
+      (error) => {
         // call redux actions
         setLoadingStatusTo(false);
         setAnError(error);
@@ -132,7 +132,7 @@ class BodyContainer extends Component {
   }
 }
 
-BodyContainer.propTypes = {
+TweetListContainer.propTypes = {
   // BEGIN: Test API props
   apiSleepTime: PropTypes.number,
   apiCodeAnswer: PropTypes.number,
@@ -162,15 +162,15 @@ BodyContainer.propTypes = {
           ).isRequired,
         },
       ),
-    ).isRequired,
+    ),
   }).isRequired,
   // END: Redux props
 };
 
-BodyContainer.defaultProps = {
+TweetListContainer.defaultProps = {
   apiSleepTime: 500,
   apiCodeAnswer: 200,
   mockedTweets: [],
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(BodyContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(TweetListContainer);
