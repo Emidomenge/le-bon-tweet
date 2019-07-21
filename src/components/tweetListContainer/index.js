@@ -85,7 +85,10 @@ class TweetListContainer extends Component {
   }
 
   handleDisplay() {
-    const { tweetsReducer: { tweetsToDisplay, isLoading, hasError } } = this.props;
+    const {
+      tweetsReducer: { tweetsToDisplay, isLoading, hasError },
+      tweetFormReducer: { newTweets },
+    } = this.props;
 
     const NoTweets = () => (
       <Thumbnail
@@ -109,7 +112,7 @@ class TweetListContainer extends Component {
       return (<ErrorWhileFetching />);
     }
 
-    const displayTweets = tweetsArr => tweetsArr.map((tweet, index) => (
+    const createTweets = tweetsArr => tweetsArr.map((tweet, index) => (
       <TweetContainer
         key={tweet.id + index}
         text={tweet.text}
@@ -120,8 +123,14 @@ class TweetListContainer extends Component {
       />
     ));
 
+    const displayAllTweets = () => {
+      const tweetsFromServer = createTweets(tweetsToDisplay);
+      const newTweetsSubmitted = createTweets(newTweets);
+      return newTweetsSubmitted.concat(tweetsFromServer);
+    }
+
     return tweetsToDisplay && tweetsToDisplay.length !== 0
-      ? displayTweets(tweetsToDisplay) : <NoTweets />;
+      ? displayAllTweets() : <NoTweets />;
   }
 
   render() {

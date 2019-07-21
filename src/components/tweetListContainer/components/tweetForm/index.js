@@ -10,6 +10,7 @@ import tweetStyles from '../tweetContainer/index.module.css';
 import helper from '../../../../lib/helper';
 import tweet from '../../../../lib/tweet';
 import tweetFormActions from '../../../../redux/actions/tweetFormActions';
+import SpinnerLoader from '../../../common/spinnerLoader';
 
 const mapStateToProps = state => ({
   ...state,
@@ -23,10 +24,11 @@ const mapDispatchToProps = dispatch => ({
 class TweetForm extends Component {
   constructor(props) {
     super(props);
+    const { text, type } = props;
     this.state = {
       tweetForm: {
-        text: '',
-        type: [],
+        text,
+        type,
       },
     };
     this.textChange = this.textChange.bind(this);
@@ -74,6 +76,12 @@ class TweetForm extends Component {
         // call redux actions
         submit(data);
         setLoadingStatusTo(false);
+        this.setState({
+          tweetForm: {
+            text: '',
+            type: [],
+          },
+        });
       },
       (/* error */) => {
         // TODO: later....
@@ -100,7 +108,7 @@ class TweetForm extends Component {
     const newState = this.state;
     const { userReducer: { userInfo: { userId } } } = this.props;
     // TODO: improve restriction. Restricted only to user itself for now...
-    newState.tweetForm.type.push(userId);
+    newState.tweetForm.type = [userId];
     this.setState({
       ...newState,
     });
@@ -116,7 +124,9 @@ class TweetForm extends Component {
       userReducer: {
         userInfo: { personalData: { picture } },
       },
+      tweetFormReducer: { isLoading },
     } = this.props;
+    const { tweetForm: { text, type } } = this.state;
     return (
       <Col sm={12} className={`mr-auto ml-auto f15 mb2 ${tweetStyles.tweetContainer}`}>
         <img src={picture} alt="tweet form user" className={`${tweetStyles.imgProfile} photoCircle`} />
@@ -130,6 +140,8 @@ class TweetForm extends Component {
                 as="textarea"
                 rows="4"
                 placeholder="Quoi de neuf ?"
+                value={text}
+                disabled={isLoading}
               />
             </Form.Group>
             <fieldset>
@@ -138,31 +150,39 @@ class TweetForm extends Component {
                   <Form.Check
                     onChange={this.publicTweetTrigger}
                     inline
+                    checked={type.length === 1 && type[0] === '*'}
                     type="radio"
                     label="Actu' Tweet"
                     name="tweetType"
                     id="publicTweet2"
+                    disabled={isLoading}
                   />
                   <Form.Check
                     onChange={this.privateTweetTrigger}
                     inline
+                    checked={type.length !== 0 && type[0] !== '*'}
                     type="radio"
                     label="Secret Tweet"
                     name="tweetType"
                     id="privateTwee2t"
+                    disabled={isLoading}
                   />
                 </Col>
               </Form.Group>
             </fieldset>
             <button
               className={`b white tc fr mb2 ${styles.submitButton}
-               ${this.isSubmitButtonDisable() ? 'lbtButtonLock o-60' : 'lbtButton'}
+               ${this.isSubmitButtonDisable() || isLoading ? 'lbtButtonLock o-60' : 'lbtButton'}
               `}
-              disabled={this.isSubmitButtonDisable()}
+              disabled={this.isSubmitButtonDisable() || isLoading}
               type="submit"
             >
-              {'Tweeter'}
-              <FontAwesomeIcon icon={faPaperPlane} className="ml2" />
+              {
+                isLoading ? <SpinnerLoader colorValue="#fff" labelValue="" /> : 'Tweeter'
+              }
+              {
+                !isLoading && <FontAwesomeIcon icon={faPaperPlane} className="ml2" />
+              }
             </button>
           </Form>
         </div>
@@ -175,13 +195,17 @@ class TweetForm extends Component {
 TweetForm.propTypes = {
   // BEGIN: Redux props
   userReducer: PropTypes.shape().isRequired,
+  tweetFormReducer: PropTypes.shape().isRequired,
   setLoadingStatusTo: PropTypes.func.isRequired,
   submit: PropTypes.func.isRequired,
   // END: Redux props
+  text: PropTypes.string,
+  type: PropTypes.arrayOf(PropTypes.string.isRequired),
 };
 
 TweetForm.defaultProps = {
-  //
+  text: '',
+  type: [],
 };
 
 export default connect(

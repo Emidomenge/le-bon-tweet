@@ -1,3 +1,4 @@
 .submitButton {
     margin-top: -45px;
+    min-width: 120px;
 }

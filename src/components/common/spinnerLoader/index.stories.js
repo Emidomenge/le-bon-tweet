@@ -1,13 +1,13 @@
-import React from 'react';
-import {storiesOf} from '@storybook/react';
+import React from 'react'
+import { storiesOf } from '@storybook/react';
 import providerDecorator from '../../../../.storybook/providerDecorator';
-import Loader from './index';
+import SpinnerLoader from './index';
 
 storiesOf('Common Components/Loader', module)
   .addDecorator(providerDecorator)
-  .add('basic loader', () => {
+  .add('spinner loader', () => {
     const story = (
-      <Loader />
+      <SpinnerLoader />
     );
     return story;
   });
