@@ -25,6 +25,8 @@ Project created by [Emilien Domenge-Heritier](https://www.domenge.fr/)
 ## Nice to have features  
   
  - [TODO] - Display "dark mode" like, when browsing private tweets
+ - [TODO] - Infinite Scroll when browsing tweets
+ - [TODO] - Mock website when user not connected
   
  
 ## [Dev] Inspect the project   
@@ -32,7 +34,7 @@ Project created by [Emilien Domenge-Heritier](https://www.domenge.fr/)
 **Prerequisites:**  
  - Clone the project  
  - Go to the project directory and install node package dependencies: `npm install` 
- - Install [Redux dev tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) chrome plugin
+ - [Optional] Install [Redux dev tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) chrome plugin
   
 **After prerequisites:**  
   
