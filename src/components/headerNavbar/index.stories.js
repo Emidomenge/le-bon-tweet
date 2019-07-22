@@ -10,7 +10,7 @@ initialState.userReducer.userInfo = serverAnswer.authenticatedUserInfo;
 
 storiesOf('Header Navbar', module)
   .addDecorator((story, storyBookData) => (providerDecorator(story, storyBookData, initialState)))
-  .add('normal navbar', () => {
+  .add('when user authenticated', () => {
     const story = (
       <HeaderNavbar />
     );

@@ -3,7 +3,7 @@ import { Nav, Navbar } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import logo from '../../assets/img/lbt_logo.png';
-import logoLbl from '../../assets/img/lbt_logo2.png';
+import logoLbl from '../../assets/img/lbt_text_logo.png';
 import styles from './index.module.css';
 import helper from '../../lib/helper';
 import userLib from '../../lib/user';
