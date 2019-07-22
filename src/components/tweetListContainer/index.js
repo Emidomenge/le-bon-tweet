@@ -1,5 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import React, { Component } from 'react';
+import Media from 'react-media';
 import { connect } from 'react-redux';
 import { Container } from 'react-bootstrap';
 import PropTypes from 'prop-types';
@@ -87,6 +88,30 @@ class TweetListContainer extends Component {
       });
   }
 
+  displaySomeTweetsLoader() {
+    const result = [];
+    const min = 1;
+    const max = 5;
+    // Get a number between min and max
+    const randomNumber = Math.floor(Math.random() * (max - min)) + min;
+    console.log(randomNumber);
+    for (let i = 0; i < randomNumber; i += 1) {
+      result.push(
+        <Media query="(max-width: 768px)">
+          {matches => (matches ? (
+            <TweetLoader
+              isPhoneVersion
+            />
+          ) : (
+            <TweetLoader />
+          ))
+          }
+        </Media>,
+      );
+    }
+    return result;
+  }
+
   handleDisplay() {
     const {
       tweetsReducer: { tweetsToDisplay, isLoading, hasError },
@@ -108,7 +133,7 @@ class TweetListContainer extends Component {
     );
 
     if (isLoading) {
-      return (<TweetLoader />);
+      return this.displaySomeTweetsLoader();
     }
 
     if (hasError) {
@@ -158,6 +183,7 @@ TweetListContainer.propTypes = {
   setAnError: PropTypes.func.isRequired,
   updateTweetsData: PropTypes.func.isRequired,
   userReducer: PropTypes.shape().isRequired,
+  tweetFormReducer: PropTypes.shape().isRequired,
   tweetsReducer: PropTypes.shape({
     isLoading: PropTypes.bool.isRequired,
     hasError: PropTypes.any,

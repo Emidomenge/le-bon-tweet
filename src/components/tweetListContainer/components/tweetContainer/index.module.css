@@ -19,3 +19,15 @@
     grid-column: 2 / 2;
     grid-row: 1 / 1;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .tweetContainer {
+        max-width: 300px;
+        grid-template-columns: 45px auto;
+    }
+
+    .imgProfile {
+        height: 40px;
+    }
+}

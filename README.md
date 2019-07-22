@@ -140,14 +140,6 @@ components [first level]
 +---[... etc ...]
 |
 +---myReactComponentN
-   |   
-   |   index.js            (= contains definition of 'myReactComponentN')
-   |   index.stories.js    (= contains storybook implementation of 'myReactComponentN')
-   |   index.test.js       (= contains unit tests of 'myReactComponentN')
-   |   index.css           (= contains css modules of 'myReactComponentN')
-   |   
-   +---components          (= contains one or further child components of 'myReactComponentN')
-       +---[... etc ...]
 
 ```
 **"redux" folder structure:**  

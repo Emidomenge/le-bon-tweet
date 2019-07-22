@@ -11,4 +11,12 @@ storiesOf('TweetList Container/Tweet', module)
       <TweetLoader />
     );
     return story;
+  })
+  .add('[phone version] tweet loading...', () => {
+    const story = (
+      <TweetLoader
+        isPhoneVersion
+      />
+    );
+    return story;
   });
