@@ -16,6 +16,12 @@ let customState;
 
 describe('TweetListContainer - with public tweets', () => {
 it('fetches data from server when server returns a successful response', () => {
+    // mock matchMedia
+    window.matchMedia = () => ({
+        addListener: () => {},
+        removeListener: () => {}
+    });
+
     customState = initialState;
     customState.userReducer.userInfo = serverAnswer.authenticatedUserInfo;
     const mockSuccessResponse = {};
