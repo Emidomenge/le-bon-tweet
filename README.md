@@ -8,7 +8,8 @@ Simple tweet app, build with [React 16](https://reactjs.org/) and [Redux](https:
 Project created by [Emilien Domenge-Heritier](https://www.domenge.fr/)  
 ## Demo  
   
-- [Click here !](https://le-bon-tweet.web.app/)   
+- [lebontweet app](https://le-bon-tweet.web.app/)   
+- [lebontweet storybook](https://le-bon-tweet.web.app/storybook)   
    
   
 ## Main features  
@@ -42,8 +43,7 @@ Project created by [Emilien Domenge-Heritier](https://www.domenge.fr/)
   
 ### `npm start`  
   
-Runs the app in the development mode.<br>  
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.  
+Runs the app in the development mode.
   
   
 ### `npm run storybook`  
