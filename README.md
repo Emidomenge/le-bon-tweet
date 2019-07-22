@@ -71,100 +71,100 @@ Runs unit tests powered with Jest and Enzyme.
  - [React v16](https://github.com/facebook/create-react-app)  
   
 ## Project Structure
-  
+ 
   ```
 project
-?   README.md
-?   .eslintrc (= eslint config) 
-????.enzyme
-?   ?   (=contains enzyme settings)
-?   ?   ...
-????.storybook
-?   ?   (=contains storybook settings)
-?   ?   ...
-????public
-?   ?   (=contains page template settings)
-?   ?   ...
-?
-????src
-    ?   index.js        (= React input)
-    ?   app.js          (= first React component, main component)
-    ?   index.css       (= global css)
-    ?   setupTests.js   (= cra setup for unit tests)
-    ?
-    ????assets          (= all static ressources)
-    ?   ?   css
-    ?   ?   img
-    ?   
-    ????components      (= contains one or further React component(s))
-    ?   ?   
-    ?   ?   [...more details below] 
-    ?   
-    ????lib             (= contains Javascript libs, useful anywhere in the project)
-    ?   ?   
-    ?   ?   *.js
-    ?   
-    ????mockedData      (= contains all the static data in order to mock server & database behaviour)
-    ?   ?   
-    ?   ?   *.js
-    ?   
-    ????Redux            (= contains all redux settings for the project)
-        ?   
-        ?   [...more details below] 
+|   README.md
+|   .eslintrc (= eslint config) 
++---.enzyme
+|   |   (=contains enzyme settings)
+|   |   ...
++---.storybook
+|   |   (=contains storybook settings)
+|   |   ...
++---public
+|   |   (=contains page template settings)
+|   |   ...
+|
++---src
+    |   index.js        (= React input)
+    |   app.js          (= first React component, main component)
+    |   index.css       (= global css)
+    |   setupTests.js   (= cra setup for unit tests)
+    |
+    +---assets          (= all static ressources)
+    |   |   css
+    |   |   img
+    |   
+    +---components      (= contains one or further React component(s))
+    |   |   
+    |   |   [...more details below] 
+    |   
+    +---lib             (= contains Javascript libs, useful anywhere in the project)
+    |   |   
+    |   |   *.js
+    |   
+    +---mockedData      (= contains all the static data in order to mock server & database behaviour)
+    |   |   
+    |   |   *.js
+    |   
+    +---Redux            (= contains all redux settings for the project)
+        |   
+        |   [...more details below] 
 ```
 
 **"components" folder structure:**  
   ```
 components [first level]
-?   
-????myReactComponent
-?   ?   
-?   |   index.js            (= contains definition of 'myReactComponent')
-?   |   index.stories.js    (= contains storybook implementation of 'myReactComponent')
-?   |   index.test.js       (= contains unit tests of 'myReactComponent')
-?   |   index.css           (= contains css modules of 'myReactComponent')
-?   ?   
-?   ????components          (= contains one or further child components of 'myReactComponent')
-|       ????[... etc ...]
+|   
++---myReactComponent
+|   |   
+|   |   index.js            (= contains definition of 'myReactComponent')
+|   |   index.stories.js    (= contains storybook implementation of 'myReactComponent')
+|   |   index.test.js       (= contains unit tests of 'myReactComponent')
+|   |   index.css           (= contains css modules of 'myReactComponent')
+|   |   
+|   +---components          (= contains one or further child components of 'myReactComponent')
+|       +---[... etc ...]
 |
-????myReactComponent2
-?   ?   
-?   |   index.js            (= contains definition of 'myReactComponent2')
-?   |   index.stories.js    (= contains storybook implementation of 'myReactComponent2')
-?   |   index.test.js       (= contains unit tests of 'myReactComponent2')
-?   |   index.css           (= contains css modules of 'myReactComponent2')
-?   ?   
-?   ????components          (= contains one or further child components of 'myReactComponent2')
-|       ????[... etc ...]
++---myReactComponent2
+|   |   
+|   |   index.js            (= contains definition of 'myReactComponent2')
+|   |   index.stories.js    (= contains storybook implementation of 'myReactComponent2')
+|   |   index.test.js       (= contains unit tests of 'myReactComponent2')
+|   |   index.css           (= contains css modules of 'myReactComponent2')
+|   |   
+|   +---components          (= contains one or further child components of 'myReactComponent2')
+|       +---[... etc ...]
 |
-????[... etc ...]
++---[... etc ...]
 |
-????myReactComponentN
-   ?   
++---myReactComponentN
+   |   
    |   index.js            (= contains definition of 'myReactComponentN')
    |   index.stories.js    (= contains storybook implementation of 'myReactComponentN')
    |   index.test.js       (= contains unit tests of 'myReactComponentN')
    |   index.css           (= contains css modules of 'myReactComponentN')
-   ?   
-   ????components          (= contains one or further child components of 'myReactComponentN')
-       ????[... etc ...]
+   |   
+   +---components          (= contains one or further child components of 'myReactComponentN')
+       +---[... etc ...]
 
 ```
 **"redux" folder structure:**  
  ```
 redux
-?
-?   glossary.js             (= contains all redux keys used for actions & reducers)
-?   initialState.js         (= contains the json send as initial state to redux)
-?   store.js                (= contains all redux configurations like reducers combination & middlewares)
-?   
-????actions                 (= contains all redux actions)
-?   ?   
-?   |   xxxxActions.js         
+|
+|   glossary.js             (= contains all redux keys used for actions & reducers)
+|   initialState.js         (= contains the json send as initial state to redux)
+|   store.js                (= contains all redux configurations like reducers combination & middlewares)
+|   
++---actions                 (= contains all redux actions)
+|   |   
+|   |   xxxxActions.js         
 |   |   ...
 |
-????reducers                (= contains all redux reducers)
-   ?   
++---reducers                (= contains all redux reducers)
+   |   
    |   xxxxReducers.js      (= contains definition of 'myReactComponent2')
    |   ...
 
