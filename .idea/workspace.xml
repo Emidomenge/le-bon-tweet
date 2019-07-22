@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c430fdf8-76db-4b84-b8e5-24661feb93eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/headerNavbar/index.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tweetListContainer/index.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/lbt_logo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/lbt_text_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/headerNavbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/headerNavbar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/headerNavbar/index.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/headerNavbar/index.stories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tweetListContainer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tweetListContainer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tweetListContainer/index.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tweetListContainer/index.stories.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,26 +31,14 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4122807">
+    <splitter split-orientation="horizontal" split-proportion="0.5827108">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/headerNavbar/index.stories.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/components/headerNavbar/index.test.js">
+            <entry file="file://$PROJECT_DIR$/src/components/tweetListContainer/index.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="324">
-                  <caret line="60" column="27" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="27" />
+                <state relative-caret-position="504">
+                  <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="e#21#47#0" expanded="true" />
@@ -61,10 +48,14 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/mockData/serverAnswer.js">
+            <entry file="file://$PROJECT_DIR$/src/components/tweetListContainer/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="151">
-                  <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+                <state relative-caret-position="550">
+                  <caret line="156" column="48" lean-forward="true" selection-start-line="156" selection-start-column="48" selection-end-line="156" selection-end-column="48" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                    <element signature="e#46#87#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -74,10 +65,10 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/common/thumbnail/index.test.js">
+            <entry file="file://$PROJECT_DIR$/src/components/tweetListContainer/index.stories.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="189">
-                  <caret line="76" column="7" lean-forward="true" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
+                <state relative-caret-position="210">
+                  <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -86,12 +77,22 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/components/tweetListContainer/components/tweetForm/index.test.js">
+            <entry file="file://$PROJECT_DIR$/src/mockData/serverAnswer.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+                <state relative-caret-position="76">
+                  <caret line="7" column="8" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="8" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/headerNavbar/index.test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="245">
+                  <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
+                    <element signature="e#21#47#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -111,9 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>errorFetchingTweetsImg</find>
-      <find>isLoading</find>
-      <find>console.</find>
       <find>hasErr</find>
       <find>setanerr</find>
       <find>ProviderWrapper</find>
@@ -141,6 +139,9 @@
       <find>text</find>
       <find>consol</find>
       <find>imgLogo</find>
+      <find>console.log</find>
+      <find>xxxxx</find>
+      <find>userReducer:</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,7 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/messageForm/index.test.js" />
         <option value="$PROJECT_DIR$/src/components/bodyContainer/index.js" />
         <option value="$PROJECT_DIR$/src/components/common/loader/index.module.js" />
         <option value="$PROJECT_DIR$/src/components/common/loader/index.module.css" />
@@ -164,7 +164,6 @@
         <option value="$PROJECT_DIR$/src/components/welcome/index.stories.js" />
         <option value="$PROJECT_DIR$/src/components/headerNavbar/index.module.css" />
         <option value="$PROJECT_DIR$/src/components/common/loader/index.js" />
-        <option value="$PROJECT_DIR$/src/components/tweetListContainer/index.stories.js" />
         <option value="$PROJECT_DIR$/src/components/tweetListContainer/components/tweetContainer/index.stories.js" />
         <option value="$PROJECT_DIR$/src/components/tweetListContainer/components/tweetLoader/index.stories.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
@@ -182,7 +181,6 @@
         <option value="$PROJECT_DIR$/src/components/common/loader/index.stories.js" />
         <option value="$PROJECT_DIR$/src/components/common/spinnerLoader/index.stories.js" />
         <option value="$PROJECT_DIR$/src/components/tweetListContainer/components/tweetForm/index.stories.js" />
-        <option value="$PROJECT_DIR$/src/components/tweetListContainer/index.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/components/tweetListContainer/components/tweetForm/index.module.css" />
         <option value="$PROJECT_DIR$/src/components/headerNavbar/index.js" />
@@ -200,6 +198,9 @@
         <option value="$PROJECT_DIR$/src/components/common/thumbnail/index.test.js" />
         <option value="$PROJECT_DIR$/src/components/headerNavbar/index.stories.js" />
         <option value="$PROJECT_DIR$/src/components/headerNavbar/index.test.js" />
+        <option value="$PROJECT_DIR$/src/components/tweetListContainer/index.stories.js" />
+        <option value="$PROJECT_DIR$/src/components/tweetListContainer/index.js" />
+        <option value="$PROJECT_DIR$/src/components/tweetListContainer/index.test.js" />
       </list>
     </option>
   </component>
@@ -260,23 +261,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="tweetListContainer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="le-bon-tweet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="le-bon-tweet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="tweetListContainer" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="le-bon-tweet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="le-bon-tweet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="tweetListContainer" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="tweetForm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -340,18 +324,17 @@
       <workItem from="1563472307634" duration="1301000" />
       <workItem from="1563557976502" duration="136000" />
       <workItem from="1563558161282" duration="63094000" />
-      <workItem from="1563780750876" duration="9199000" />
+      <workItem from="1563780750876" duration="13967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79031000" />
+    <option name="totallyTimeSpent" value="83799000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-30" width="1920" height="1110" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20917822" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.20917822" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -386,16 +369,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/redux/actions/userActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mockData/users.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -407,16 +380,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/tweetListContainer/index.stories.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -633,18 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/tweetListContainer/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="126" column="6" selection-start-line="126" selection-start-column="6" selection-end-line="126" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#46#87#0" expanded="true" />
-            <element signature="n#!!block;n#getTweets#0;n#TweetListContainer#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/tweetListContainer/components/tweetForm/index.module.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -813,17 +764,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mockData/serverAnswer.js">
+    <entry file="file://$PROJECT_DIR$/src/components/headerNavbar/index.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        <state relative-caret-position="245">
+          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#21#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/headerNavbar/index.test.js">
+    <entry file="file://$PROJECT_DIR$/src/components/tweetListContainer/index.stories.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="60" column="27" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="27" />
+        <state relative-caret-position="210">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mockData/serverAnswer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/tweetListContainer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="156" column="48" lean-forward="true" selection-start-line="156" selection-start-column="48" selection-end-line="156" selection-end-column="48" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#46#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/tweetListContainer/index.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#21#47#0" expanded="true" />

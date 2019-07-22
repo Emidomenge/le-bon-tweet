@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import providerDecorator from '../../../.storybook/providerDecorator';
-import BodyContainer from '.';
+import TweetListContainer from '.';
 import mockPublicTweets from '../../mockData/publicTweets';
 import mockPrivateTweets from '../../mockData/privateTweets';
 
@@ -9,7 +9,7 @@ storiesOf('TweetList Container', module)
   .addDecorator(providerDecorator)
   .add('with public tweets', () => {
     const story = (
-      <BodyContainer
+      <TweetListContainer
         mockedTweets={mockPublicTweets}
       />
     );
@@ -17,7 +17,7 @@ storiesOf('TweetList Container', module)
   })
   .add('with private tweets', () => {
     const story = (
-      <BodyContainer
+      <TweetListContainer
         mockedTweets={mockPrivateTweets}
       />
     );
@@ -25,13 +25,13 @@ storiesOf('TweetList Container', module)
   })
   .add('no tweets', () => {
     const story = (
-      <BodyContainer />
+      <TweetListContainer />
     );
     return story;
   })
   .add('fetching error', () => {
     const story = (
-      <BodyContainer
+      <TweetListContainer
         apiCodeAnswer={403}
       />
     );

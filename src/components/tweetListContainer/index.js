@@ -41,6 +41,9 @@ class TweetListContainer extends Component {
     const {
       apiSleepTime, apiCodeAnswer, setLoadingStatusTo,
       setAnError, updateTweetsData, mockedTweets,
+      userReducer: {
+        userInfo: { userId },
+      },
     } = this.props;
 
     const headerParams = {
@@ -64,7 +67,7 @@ class TweetListContainer extends Component {
         },
       },
       requestParams: {
-        userId: 'xxxxx',
+        userId,
         tweetType: 'public',
       },
     };
@@ -127,7 +130,7 @@ class TweetListContainer extends Component {
       const tweetsFromServer = createTweets(tweetsToDisplay);
       const newTweetsSubmitted = createTweets(newTweets);
       return newTweetsSubmitted.concat(tweetsFromServer);
-    }
+    };
 
     return tweetsToDisplay && tweetsToDisplay.length !== 0
       ? displayAllTweets() : <NoTweets />;
@@ -154,6 +157,7 @@ TweetListContainer.propTypes = {
   setLoadingStatusTo: PropTypes.func.isRequired,
   setAnError: PropTypes.func.isRequired,
   updateTweetsData: PropTypes.func.isRequired,
+  userReducer: PropTypes.shape().isRequired,
   tweetsReducer: PropTypes.shape({
     isLoading: PropTypes.bool.isRequired,
     hasError: PropTypes.any,
