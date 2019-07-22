@@ -1,7 +1,8 @@
 
-  
-  
 # Le-bon-tweet  
+
+![](demo.gif)
+  
     
 Simple tweet app, build with [React 16](https://reactjs.org/) and [Redux](https://github.com/reduxjs/redux) . 
   
