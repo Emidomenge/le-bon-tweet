@@ -154,7 +154,7 @@ class TweetForm extends Component {
                     type="radio"
                     label="Actu' Tweet"
                     name="tweetType"
-                    id="publicTweet2"
+                    id="publicTweet"
                     disabled={isLoading}
                   />
                   <Form.Check
@@ -164,7 +164,7 @@ class TweetForm extends Component {
                     type="radio"
                     label="Secret Tweet"
                     name="tweetType"
-                    id="privateTwee2t"
+                    id="privateTweet"
                     disabled={isLoading}
                   />
                 </Col>
