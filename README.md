@@ -7,6 +7,7 @@
 Simple tweet app, build with [React 16](https://reactjs.org/) and [Redux](https://github.com/reduxjs/redux) . 
   
 Project created by [Emilien Domenge-Heritier](https://www.domenge.fr/)  
+
 ## Demo  
   
 - [lebontweet app](https://le-bon-tweet.web.app/)   
@@ -77,12 +78,15 @@ Runs unit tests powered with Jest and Enzyme.
 project
 |   README.md
 |   .eslintrc (= eslint config) 
+|
 +---.enzyme
 |   |   (=contains enzyme settings)
 |   |   ...
+|
 +---.storybook
 |   |   (=contains storybook settings)
 |   |   ...
+|
 +---public
 |   |   (=contains page template settings)
 |   |   ...
@@ -123,7 +127,7 @@ components [first level]
 |   |   index.js            (= contains definition of 'myReactComponent')
 |   |   index.stories.js    (= contains storybook implementation of 'myReactComponent')
 |   |   index.test.js       (= contains unit tests of 'myReactComponent')
-|   |   index.css           (= contains css modules of 'myReactComponent')
+|   |   index.module.css           (= contains css modules of 'myReactComponent')
 |   |   
 |   +---components          (= contains one or further child components of 'myReactComponent')
 |       +---[... etc ...]
@@ -133,7 +137,7 @@ components [first level]
 |   |   index.js            (= contains definition of 'myReactComponent2')
 |   |   index.stories.js    (= contains storybook implementation of 'myReactComponent2')
 |   |   index.test.js       (= contains unit tests of 'myReactComponent2')
-|   |   index.css           (= contains css modules of 'myReactComponent2')
+|   |   index.module.css           (= contains css modules of 'myReactComponent2')
 |   |   
 |   +---components          (= contains one or further child components of 'myReactComponent2')
 |       +---[... etc ...]
